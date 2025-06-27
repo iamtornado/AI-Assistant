@@ -366,7 +366,7 @@ async def process_messages(session_id: str):
             #     block=True,
             #     timeout=30
             # )
-
+            # 从redis消息队列中弹出最新的一条消息，同时不删除消息
             data = await asyncio.to_thread(
                 redis_queue.stream_peek_latest,
                 queue_name,

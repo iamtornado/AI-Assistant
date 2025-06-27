@@ -98,7 +98,7 @@ async def rocketchat_webhook(request: Request):
     #     raise HTTPException(status_code=500, detail=f"Queue {queue_name} is not a list type")
     if redis_queue.qsize(queue_name) == 0 and queue_name not in redis_queue.get_all_queues(): 
         logger.warning(f"【debug】队列 {queue_name} 不存在，将创建新队列")
-    # 消息入队
+    # 消息入队，同时设置队列仅保留最近1000条消息，避免内存溢出
     redis_queue.enqueue_stream(queue_name, agent_reply)
     # 入队后验证
     new_size = redis_queue.qsize(queue_name)
