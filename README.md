@@ -3,7 +3,7 @@
 A streaming AI assistant application integrating Chainlit and RAGFlow with Redis message queuing.
 
 # Complete Report
-    Please read：https://alidocs.dingtalk.com/i/nodes/1DKw2zgV2PAo2rA7uLr72orN8B5r9YAn?utm_scene=team_space
+- Email: Please read：[https://alidocs.dingtalk.com/i/nodes/1DKw2zgV2PAo2rA7uLr72orN8B5r9YAn?utm_scene=team_space]
     
 ## Overview
 This project provides an interactive AI assistant with streaming responses, document references, and human agent escalation capabilities. The application uses Chainlit for the frontend interface and RAGFlow for backend knowledge retrieval and response generation.

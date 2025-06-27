@@ -3,7 +3,7 @@
 一个集成了 Chainlit 和 RAGFlow 并使用 Redis 消息队列的流式 AI 助手应用程序。
 
 # 完整报告
-    请阅读：https://alidocs.dingtalk.com/i/nodes/1DKw2zgV2PAo2rA7uLr72orN8B5r9YAn?utm_scene=team_space
+- Email: 请点击查看完整项目报告：[https://alidocs.dingtalk.com/i/nodes/1DKw2zgV2PAo2rA7uLr72orN8B5r9YAn?utm_scene=team_space]
 
 ## 概述
 本项目提供了一个具有流式响应、文档引用和人工代理升级功能的交互式 AI 助手。该应用程序使用 Chainlit 作为前端界面，RAGFlow 用于后端知识检索和响应生成。
