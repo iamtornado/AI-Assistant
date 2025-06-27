@@ -1,0 +1,8 @@
+﻿# 忽略隐藏目录和文件
+.chainlit/
+.env
+app.log
+.files/
+.venv/
+.trae/
+__pycache__/
