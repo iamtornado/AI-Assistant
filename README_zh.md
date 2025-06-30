@@ -5,6 +5,9 @@
 # 完整报告
 - Email: 请点击查看完整项目报告：[https://alidocs.dingtalk.com/i/nodes/1DKw2zgV2PAo2rA7uLr72orN8B5r9YAn?utm_scene=team_space]
 
+## 详细部署说明，请参考以下文档：
+ - [部署指南](https://alidocs.dingtalk.com/i/nodes/0eMKjyp813AopzA7sdjrlg7AVxAZB1Gv)
+
 ## 概述
 本项目提供了一个具有流式响应、文档引用和人工代理升级功能的交互式 AI 助手。该应用程序使用 Chainlit 作为前端界面，RAGFlow 用于后端知识检索和响应生成。
 
@@ -25,11 +28,33 @@
 
 ## 安装步骤
 1. 克隆此仓库
-2. 安装依赖：
    ```bash
-   pip install -r requirements.txt
+   git clone https://github.com/iamtornado/AI-Assistant.git
    ```
-3. 创建包含所需环境变量的 `.env` 文件（参见配置部分）
+2. 创建并激活虚拟环境：
+   Linux：
+   ```bash
+   python -m venv .venv
+   ```
+   Windows：
+   ```bash
+   python -m venv .venv
+   ```
+   激活虚拟环境：
+   Linux：
+   ```bash
+   source .venv/bin/activate
+   ```
+   Windows：
+   ```bash
+   .venv\Scripts\activate
+   ```
+
+3. 安装依赖：
+   ```bash
+   pip install -U fastapi uvicorn chainlit redis rocketchat_API
+   ```
+4. 创建包含所需环境变量的 `.env` 文件（参见配置部分）
 
 ## 配置
 所需环境变量：

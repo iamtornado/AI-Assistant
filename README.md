@@ -4,6 +4,9 @@ A streaming AI assistant application integrating Chainlit and RAGFlow with Redis
 
 # Complete Report
 - Email: Please read：[https://alidocs.dingtalk.com/i/nodes/1DKw2zgV2PAo2rA7uLr72orN8B5r9YAn?utm_scene=team_space]
+
+## For detailed deployment instructions, please refer to the following document:
+ - [Deployment Guide](https://alidocs.dingtalk.com/i/nodes/0eMKjyp813AopzA7sdjrlg7AVxAZB1Gv)
     
 ## Overview
 This project provides an interactive AI assistant with streaming responses, document references, and human agent escalation capabilities. The application uses Chainlit for the frontend interface and RAGFlow for backend knowledge retrieval and response generation.
@@ -23,13 +26,37 @@ This project provides an interactive AI assistant with streaming responses, docu
 - RAGFlow API access
 - Rocket.Chat server (for human escalation)
 
+
+  
 ## Installation
 1. Clone this repository
-2. Install dependencies:
    ```bash
-   pip install -r requirements.txt
+   git clone https://github.com/iamtornado/AI-Assistant.git
    ```
-3. Create a `.env` file with required environment variables (see Configuration section)
+2. Create and activate a virtual environment:
+   Linux:
+   ```bash
+   python -m venv .venv
+   ```
+   Windows:
+   ```bash
+   python -m venv .venv
+   ```
+   Activate the virtual environment:
+   Linux:
+   ```bash
+   source .venv/bin/activate
+   ```
+   Windows:
+   ```bash
+   .venv\Scripts\activate
+   ```
+
+3. Install dependencies:
+   ```bash
+   pip install -U fastapi uvicorn chainlit redis rocketchat_API
+   ```
+4. Create a `.env` file with required environment variables (see Configuration section)
 
 ## Configuration
 Required environment variables:

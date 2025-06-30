@@ -373,16 +373,18 @@ async def process_messages(session_id: str):
                 block=True,
                 timeout=30
             )
-            message = data['data']['data']
+            
 
-            if message is not None:
+            if data is None:
+                logger.info(f"【debug】队列 {queue_name} 超时未读取到消息")
+                continue
+            else:
+                message = data['data']['data']
                 logger.info(f"【debug】从队列 {queue_name} 读取到消息: {message}")
                 await cl.Message(content=message).send()
                 logger.info(f"【debug】消息已发送到Chainlit用户：{cl.user_session.get("user").identifier}，人工客服：{cl.user_session.get("rocket_chat_recipient")} 房间ID为：{room_id}，消息内容为：{message}")
 
-            else:
-                logger.info(f"【debug】队列 {queue_name} 超时未读取到消息")
-
+            
         except asyncio.CancelledError:
             logger.info(f"【debug】会话 {session_id} 消息处理任务已取消")
             break
