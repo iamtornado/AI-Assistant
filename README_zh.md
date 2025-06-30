@@ -1,5 +1,7 @@
 ﻿# AI 助手
 
+[![English Version（英文）](https://img.shields.io/badge/-English%20Version-blue)](README.md)
+
 一个集成了 Chainlit 和 RAGFlow 并使用 Redis 消息队列的流式 AI 助手应用程序。
 
 # 完整报告

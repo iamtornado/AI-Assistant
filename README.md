@@ -1,5 +1,7 @@
 # AI Assistant
 
+[![Chinese Version（简体中文）](https://img.shields.io/badge/-Chinese%20Version-blue)](README_zh.md)
+
 A streaming AI assistant application integrating Chainlit and RAGFlow with Redis message queuing.
 
 # Complete Report
